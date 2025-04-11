@@ -5,6 +5,7 @@ ordenação por inserção
 """
 
 import os
+
 n = int(input('Digite o valor de n: '))
 os.system('cls')
 vetor = list(map(int,input('Digite os números: ').split()))
