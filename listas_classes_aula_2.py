@@ -1,40 +1,61 @@
 class Lista:
     def __init__ (self,tammax):
-        self.elementosnumero = 4
+        self.elementosnumero = 0
         self.dados = [0]*tammax
 
     def consulta(self, x):
         for _ in range(self.elementosnumero):
             if self.dados[_] == x:
-                return True
+                return (True, self.dados[_]) 
         return False
         
     def insere(self, y):
             
         if  self.consulta(y):
-            return True
+            return False
 
         elif self.elementosnumero<len(self.dados):
             self.dados[self.elementosnumero] = y
             self.elementosnumero+=1
             return True
-        
-        else:
-            return False
+        return False
+    
     def remove(self, z):
-        if z not in self.dados:
-            return True
-        for _ in range(self.elementosnumero):
-            if self.dados[_] == z:
-                self.dados.remove(z)
-                self.dados.append(0)
-                return True
+        if self.consulta(z):
+            ...
+            
+        # for _ in range(self.elementosnumero):
+        #     if self.dados[_]== z:
+        #         self.elementosnumero-=1
+        #         self.dados[_] = self.dados[self.elementosnumero]
+        #         self.dados.pop()
+        #         return True
+            
         return False
     
 
-l = Lista(4)
-print(l.insere(10))  # True
-print(l.insere(20))  # True
-print(l.insere(30))  # True
-print(l.insere(40))  # True
+l = Lista(5)
+l.insere(10)
+l.insere(7)
+l.insere(3)
+l.insere(15)
+l.insere(13)
+print(l.dados)
+l.remove(10)
+'''
+Casos: 
+    1 lista vazia
+    2 lista nao vazia
+        x ta na lista
+        x n ta na lista 
+        (corrigir funcaoremove)
+
+        
+
+exercicio: 
+    pilhas
+    
+
+
+'''
 print(l.dados)
