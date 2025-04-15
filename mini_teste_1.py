@@ -15,8 +15,7 @@
 
 class Lista: 
     def __init__(self, tammax):
-        self.lista = [0]*tammax
-        self.n_elementos = 5
+        self.lista = []
 
     def retornaMaior(self):
 
@@ -26,8 +25,8 @@ class Lista:
         else:
             return False, -1
     def retira_i(self, i):
-        if i <= self.tammax:
-            self.lista.remove(self.lista[i])
+        if 0<=i < len(self.lista) :
+            self.lista.pop(i)
             return True
         else:
             return False
