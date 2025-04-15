@@ -21,3 +21,13 @@ class Lista:
         
         else:
             return False
+    def remove(self, z):
+        if z not in self.dados:
+            return True
+        for _ in range(self.elementosnumero):
+            if self.dados[_] == z:
+                self.dados.remove(z)
+                self.dados.append(0)
+                return True
+        return False
+    
