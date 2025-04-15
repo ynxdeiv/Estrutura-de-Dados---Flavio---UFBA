@@ -5,7 +5,8 @@ class Pilha:
     def empilha(self, x):
         pass
     def desempilha(self, x):
-        pass
+        pass 
+    
     '''
         retorna True, valor desempilhado
     '''
