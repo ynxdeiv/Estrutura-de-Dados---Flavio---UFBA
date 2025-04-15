@@ -26,7 +26,7 @@ class Lista:
         else:
             return False, -1
     def retira_i(self, i):
-        if i <= len((self.lista)-1):
+        if i <= self.tammax:
             self.lista.remove(self.lista[i])
             return True
         else:
