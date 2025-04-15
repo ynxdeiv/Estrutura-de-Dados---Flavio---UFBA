@@ -3,7 +3,7 @@ Se a lista não estiver vazia, retorna True e o maior valor de chave armazenada 
 
 class Lista: 
     def __init__(self):
-        self.lista = []
+        self.lista = [1,2,3,4,5,6,7,8]
         self.tamanhomax=10
 
     def retornaMaior(self):
@@ -14,4 +14,4 @@ class Lista:
         else:
             return False, -1
 
-        pass
+    
