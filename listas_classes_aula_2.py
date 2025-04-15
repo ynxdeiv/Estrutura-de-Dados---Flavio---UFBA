@@ -8,4 +8,16 @@ class Lista:
             if self.dados[_] == x:
                 return True
         return False
+        
+    def insere(self, y):
+            
+        if  self.consulta(y):
+            return True
 
+        elif self.elementosnumero<len(self.dados):
+            self.dados[self.elementosnumero] = y
+            self.elementosnumero+=1
+            return True
+        
+        else:
+            return False
