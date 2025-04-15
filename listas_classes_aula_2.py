@@ -1,6 +1,6 @@
 class Lista:
     def __init__ (self,tammax):
-        self.elementosnumero = 0
+        self.elementosnumero = 4
         self.dados = [0]*tammax
 
     def consulta(self, x):
@@ -31,3 +31,10 @@ class Lista:
                 return True
         return False
     
+
+l = Lista(4)
+print(l.insere(10))  # True
+print(l.insere(20))  # True
+print(l.insere(30))  # True
+print(l.insere(40))  # True
+print(l.dados)
