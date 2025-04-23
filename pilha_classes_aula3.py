@@ -1,7 +1,6 @@
 class Pilha:
     def __init__(self,tammax):
-        self.dados = []
-        self.tammax = tammax
+        self.dados = [0]*tammax
         self.nelems = 0 
     def empilha(self, x):
         if self.nelems <len(self.dados):
@@ -23,8 +22,7 @@ class Pilha:
     
 
 
-pilha = Pilha(5)
+pilha = Pilha(2)
 pilha.empilha(2)
 pilha.empilha(3)
-pilha.printa()
 pilha.printa()
