@@ -3,6 +3,9 @@ class Pilha:
         self.dados = [0]*tammax
         self.nelems = 0 
     def empilha(self, x):
+        if self.nelems == len(self.dados):
+            return False
+        
         if self.nelems <len(self.dados):
             self.dados[self.nelems] = x
             self.nelems+=1
