@@ -2,25 +2,22 @@ class Pilha:
     def __init__(self,tammax):
         self.dados = []
         self.tammax = tammax
-        pass
-
+        self.nelems = 0 
     def empilha(self, x):
-        if len(self.dados) <self.tammax:
-            self.dados.append(x)
+        if self.nelems <len(self.dados):
+            self.dados[self.nelems] = x
+
             return True
-        else:
-            return False
+
+        return False
+        
     def desempilha(self):
         if self.dados:
             last = self.dados.pop()
             return True, last
     
-        else:
-            return False, -1
-
-    '''
-        retorna True, valor desempilhado
-    '''
+        return False, -1
+        
     def printa(self):
         print(self.dados)
     

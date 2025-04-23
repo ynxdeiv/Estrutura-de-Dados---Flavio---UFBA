@@ -21,15 +21,9 @@ class Lista:
         return False
     
     def remove(self, z):
-        if self.consulta(z):
-            ...
-            
-        # for _ in range(self.elementosnumero):
-        #     if self.dados[_]== z:
-        #         self.elementosnumero-=1
-        #         self.dados[_] = self.dados[self.elementosnumero]
-        #         self.dados.pop()
-        #         return True
+        resultado, valor =
+
+            return True
             
         return False
     
