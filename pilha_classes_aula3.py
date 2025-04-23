@@ -6,15 +6,15 @@ class Pilha:
     def empilha(self, x):
         if self.nelems <len(self.dados):
             self.dados[self.nelems] = x
-
+            self.nelems+=1
             return True
 
         return False
         
     def desempilha(self):
-        if self.dados:
-            last = self.dados.pop()
-            return True, last
+        if len(self.dados)>0:
+            self.nelems -=1
+            return True, self.dados[self.nelems]
     
         return False, -1
         
