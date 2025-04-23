@@ -6,6 +6,17 @@ class Filas:
 
 
     def enfileirar(self):
+        if self.nelems == len(self.dados):
+            return False
+
         
+
+
+
+        return True
+
+        pass
+    def desenfileirar(self):
+
 
         pass
