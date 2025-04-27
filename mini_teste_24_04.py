@@ -22,5 +22,21 @@ class Lista:
                 maiores+=1
         return True, maiores
 
+    def inverte(self):
+
+        if self.nelems==0:
+            return False
         
+        ultimo = self.dados[self.nelems-1]
+        menor = self.dados[0]
+        i=0
+        for _ in range(self.nelems):
+            if menor > self.dados[_]:
+                menor = self.dados[_]
+                i+=1
+        
+        self.dados[i]=ultimo
+        self.dados[self.nelems-1]=menor
+        return True
+
 
